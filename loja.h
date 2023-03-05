@@ -11,11 +11,17 @@ typedef struct item {
 	double valor;
 } item;
 
+typedef struct {
+	int quantity;
+	int id;
+} item_checkout;
+
 typedef enum {false,true} bool;
 
 void introducao();
 void ler_cardapio(char*);
 double str_para_double(char*);
+int str_para_int(char*);
 void realocar_objeto(void*,void*);
 void* alterar_vetor(void*,int);
 void listar_todos_itens(void);
@@ -27,6 +33,9 @@ void mostrar_cardapio(void);
 void imprimir_saudacao(void);
 void esperar(double);
 void listar_itens(int);
+void init_cart(item_checkout*);
+void list_cart(item_checkout[]);
+void add_cart(item_checkout*,int);
 
 extern item* itens;
 extern int itens_q;

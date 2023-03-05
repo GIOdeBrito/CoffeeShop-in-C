@@ -43,12 +43,12 @@
 	<string.h>
 	"loja.h"
 
-1678013240 source:f:\projetos\github\coffeeshop\cardapio.c
+1678036476 source:f:\projetos\github\coffeeshop\cardapio.c
 	<stdio.h>
 	<string.h>
 	"loja.h"
 
-1677977295 f:\projetos\github\coffeeshop\loja.h
+1678037822 f:\projetos\github\coffeeshop\loja.h
 
 1677931116 source:f:\projetos\github\coffeeshop\dados.c
 	<stdio.h>
@@ -79,7 +79,7 @@
 	<stdio.h>
 	"loja.h"
 
-1677977394 source:f:\projetos\github\coffeeshop\utis.c
+1678030227 source:f:\projetos\github\coffeeshop\utis.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>

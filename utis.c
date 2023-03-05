@@ -20,6 +20,23 @@ double str_para_double (char* str)
 	return d;
 }
 
+int str_para_int (char* str)
+{
+	/*
+	Converte uma string para tipo inteiro
+	*/
+
+	if(e_numero(str) == false)
+	{
+		return 0;
+	}
+
+	int d = 0;
+	sscanf(str, "%d", &d);
+
+	return d;
+}
+
 bool e_numero (char* str)
 {
 	/*
