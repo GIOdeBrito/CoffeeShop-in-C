@@ -1,0 +1,87 @@
+# depslib dependency file v1.0
+1677797808 source:f:\projetos\c\lojacafe\main.c
+	<stdio.h>
+	<stdlib.h>
+	"loja.h"
+
+1677435750 f:\projetos\c\lojacafe\global.h
+
+1677977295 f:\projetos\c\lojacafe\loja.h
+
+1677752102 source:f:\projetos\c\lojacafe\teste.c
+	<stdio.h>
+	"loja.h"
+
+1677977466 source:f:\projetos\c\lojacafe\intro.c
+	<stdio.h>
+	<string.h>
+	"loja.h"
+
+1677931116 source:f:\projetos\c\lojacafe\dados.c
+	<stdio.h>
+	<string.h>
+	"loja.h"
+
+1677977394 source:f:\projetos\c\lojacafe\utis.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"loja.h"
+
+1677801723 source:f:\projetos\c\lojacafe\entrada.c
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+	"loja.h"
+
+1677932031 source:f:\projetos\c\lojacafe\tempo.c
+	<time.h>
+	"loja.h"
+
+1678012803 source:f:\projetos\c\lojacafe\cardapio.c
+	<stdio.h>
+	<string.h>
+	"loja.h"
+
+1678013240 source:f:\projetos\github\coffeeshop\cardapio.c
+	<stdio.h>
+	<string.h>
+	"loja.h"
+
+1677977295 f:\projetos\github\coffeeshop\loja.h
+
+1677931116 source:f:\projetos\github\coffeeshop\dados.c
+	<stdio.h>
+	<string.h>
+	"loja.h"
+
+1677801723 source:f:\projetos\github\coffeeshop\entrada.c
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+	"loja.h"
+
+1677977466 source:f:\projetos\github\coffeeshop\intro.c
+	<stdio.h>
+	<string.h>
+	"loja.h"
+
+1677797808 source:f:\projetos\github\coffeeshop\main.c
+	<stdio.h>
+	<stdlib.h>
+	"loja.h"
+
+1677932031 source:f:\projetos\github\coffeeshop\tempo.c
+	<time.h>
+	"loja.h"
+
+1677752102 source:f:\projetos\github\coffeeshop\teste.c
+	<stdio.h>
+	"loja.h"
+
+1677977394 source:f:\projetos\github\coffeeshop\utis.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"loja.h"
+

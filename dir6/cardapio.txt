@@ -1,0 +1,44 @@
+# Neste arquivo ficam os dados do cardápio
+# para criar um novo item basta abrir chaves, colocar as devidas informações
+# do item e em seguida fechar a chaves.
+
+# Cerquilhas e linhas em branco serão ignoradas
+
+
+# Esqueleto de um item
+# Item {
+# Valor do item
+# Descrição do item
+# }
+
+Cafe Preto {
+# Valor do item
+2.50
+# Descrição do item
+Cafe preto tradicional.
+}
+
+Cafe com Leite {
+4.00
+Cafe com goticulas de leite pingado.
+}
+
+Cafe Latte {
+9.80
+Cafe espumante a' italiana; espresso com leite.
+}
+
+Cafe Mistico {
+5.30
+Cafe feito com sementes cozidas, levemente adocado. Sabor abobora mistica.
+}
+
+Cafe Sintetico {
+2.90
+Feito com sementes falsas. 
+}
+
+Sem Cafe? {
+1.00
+Basicamente apenas um copo de agua.
+}
