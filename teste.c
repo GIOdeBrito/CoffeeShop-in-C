@@ -18,3 +18,16 @@ void listar_todos_itens (void)
 		//printf("---------------------\n\n");
 	}
 }
+
+void salto_de_linhas (void)
+{
+	/*
+	Cria espaço entre as linhas no console
+	*/
+
+	for(int i = 0; i < 10; i++)
+	{
+		printf("\n");
+		esperar(0.05);
+	}
+}

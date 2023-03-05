@@ -6,6 +6,8 @@ void mostrar_cardapio (void)
 {
 	int pagina = 0, index = 0;
 
+	salto_de_linhas();
+
 	printf("\t#####################\n");
 	printf("\t#     CARDAPIO      #\n");
 	printf("\t#####################\n");
@@ -13,11 +15,7 @@ void mostrar_cardapio (void)
 	// Carrinho de compra do usuário
 	item_checkout cart[64];
 
-	for(int i = 0; i < 64; i++)
-	{
-		cart[i].id = 0;
-		cart[i].quantity = 0;
-	}
+	init_cart(cart);
 
 	while(true)
 	{
@@ -65,11 +63,15 @@ void mostrar_cardapio (void)
 			break;
 		}
 	}
+
+	salto_de_linhas();
 }
 
 void listar_itens (int pg)
 {
 	int iteracao = 0;
+
+	salto_de_linhas();
 
 	for(int i = pg; ; i++)
 	{
@@ -94,38 +96,65 @@ void listar_itens (int pg)
 	}
 }
 
-void add_cart (item_checkout* cart, int id)
+void init_cart (item_checkout *cart)
 {
-	if(id > itens_q-1)
+	for(int i = 0; i < 64; i++)
+	{
+		cart[i].id = 0;
+		cart[i].quantity = 0;
+		//printf("\tID=%d, I=%d\n", cart[i].id,i);
+	}
+}
+
+void add_cart (item_checkout *cart, int id)
+{
+	int v_id = id-1;
+
+	salto_de_linhas();
+
+	if(v_id > itens_q-1 || v_id < 0)
 	{
 		return;
 	}
 
 	for(int i = 0; i < 64; i++)
 	{
-		//*(cart + i) = 66;
-		//&cart[i].id = 66;
-
-		//cart[i]->id = 66;
-
-		printf("%d\n", *(cart+i).id);
+		if(cart[i].id == 0 && cart[i].quantity == 0 || cart[i].id == v_id)
+		{
+			cart[i].quantity++;
+			cart[i].id = v_id;
+			break;
+		}
 	}
+
+	printf("\n\t[%s adicionado ao carrinho!]\n", itens[v_id].nome);
 }
 
 void list_cart (item_checkout cart[])
 {
-	for(int i = 0; i < length(cart); i++)
+	double total = 0.0;
+
+	for(int i = 0; i < 64; i++)
 	{
-		if(cart[i].quantity == 0)
+		if(cart[i].id == 0 && cart[i].quantity == 0)
 		{
 			continue;
 		}
 
-		printf("\t---------------------\n");
+		printf("\n\t---------------------\n");
+		printf("\tOrdem: %d\n", i+1);
 		printf("\t%s\n", itens[cart[i].id].nome);
-		printf("\t%d unidades\n", cart[i].quantity);
-		printf("\tTotal = R$%.2lf\n", itens[cart[i].id].valor * cart[i].quantity);
-		printf("\t---------------------\n\n");
+		printf("\t%d unidade(s)\n", cart[i].quantity);
+
+		double stotal = itens[cart[i].id].valor * cart[i].quantity;
+		total += stotal;
+
+		printf("\tSubtotal = R$%.2lf\n", stotal);
+		printf("\t---------------------\n");
 		esperar(0.32);
 	}
+
+	printf("\n\t---------------------\n");
+	printf("\tTotal da compra: R$%.2lf\n", total);
+	printf("\t---------------------\n\n");
 }

@@ -18,6 +18,7 @@ typedef struct {
 
 typedef enum {false,true} bool;
 
+void salto_de_linhas(void);
 void introducao();
 void ler_cardapio(char*);
 double str_para_double(char*);
